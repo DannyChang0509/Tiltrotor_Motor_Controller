@@ -10,7 +10,7 @@ void setup() {
 } 
   
 void loop() { 
-  potValue = analogRead(A0);
+  potValue = pulseIn(3, HIGH, 20000);
   potValue = map(potValue, MIN, MAX, 0, 255);
   
   analogWrite(9,potValue);
